@@ -1,6 +1,7 @@
 package com.example.demo.services.customer;
 
 import com.example.demo.domain.Customer;
+import com.example.demo.domain.Product;
 import org.springframework.context.annotation.Profile;
 import org.springframework.stereotype.Service;
 
@@ -23,15 +24,17 @@ public class CustomerServiceDaoImpl implements CustomerService {
     @Override
     public List<Customer> listAll() {
         EntityManager em = emf.createEntityManager();
-
-        return em.createQuery("from Customer",Customer.class).getResultList();
+        List<Customer> customers = em.createQuery("from Customer",Customer.class).getResultList();
+        em.close();
+        return customers;
     }
 
     @Override
     public Customer getById(Integer id) {
         EntityManager em = emf.createEntityManager();
-
-        return em.find(Customer.class, id);
+        Customer customer = em.find(Customer.class, id);
+        em.close();
+        return customer;
     }
 
     @Override
@@ -41,6 +44,7 @@ public class CustomerServiceDaoImpl implements CustomerService {
         em.getTransaction().begin();
         Customer savedCustomer = em.merge(domainObject);
         em.getTransaction().commit();
+        em.close();
 
         return savedCustomer;
     }
@@ -52,5 +56,6 @@ public class CustomerServiceDaoImpl implements CustomerService {
         em.getTransaction().begin();
         em.remove(em.find(Customer.class, id));
         em.getTransaction().commit();
+        em.close();
     }
 }
