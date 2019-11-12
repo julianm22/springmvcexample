@@ -9,7 +9,6 @@ public abstract class AbstractMapService {
 
     public AbstractMapService() {
         domainMap = new HashMap<>();
-        loadDomainObjects();
     }
 
     public List<DomainObject> listAll() { return new ArrayList<>(domainMap.values()); }
@@ -38,7 +37,5 @@ public abstract class AbstractMapService {
             return Collections.max(domainMap.keySet()) + 1;
         }
     }
-
-    protected abstract void loadDomainObjects();
 
 }

@@ -1,8 +1,7 @@
 package com.example.demo.controllers;
 
 import com.example.demo.domain.Product;
-import com.example.demo.services.ProductService;
-import org.junit.Before;
+import com.example.demo.services.product.ProductService;
 import org.junit.Test;
 import org.junit.jupiter.api.BeforeEach;
 import org.mockito.*;

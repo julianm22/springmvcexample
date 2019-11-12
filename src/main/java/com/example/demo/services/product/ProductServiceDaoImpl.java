@@ -1,4 +1,4 @@
-package com.example.demo.services;
+package com.example.demo.services.product;
 
 import com.example.demo.domain.Product;
 import org.springframework.context.annotation.Profile;
