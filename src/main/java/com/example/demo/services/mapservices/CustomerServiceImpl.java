@@ -1,12 +1,11 @@
-package com.example.demo.services.customer;
+package com.example.demo.services.mapservices;
 
 import com.example.demo.domain.Customer;
 import com.example.demo.domain.DomainObject;
-import com.example.demo.services.AbstractMapService;
+import com.example.demo.services.CustomerService;
 import org.springframework.context.annotation.Profile;
 import org.springframework.stereotype.Service;
 
-import java.util.HashMap;
 import java.util.List;
 
 /**

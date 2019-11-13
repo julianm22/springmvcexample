@@ -2,9 +2,6 @@ package com.example.demo.domain;
 
 import javax.persistence.*;
 
-/**
- * Created by jt on 11/14/15.
- */
 @Entity
 public class Customer implements DomainObject {
 
@@ -24,6 +21,9 @@ public class Customer implements DomainObject {
     private String city;
     private String state;
     private String zipCode;
+
+    @OneToOne(cascade = {CascadeType.ALL})
+    private User user;
 
     @Override
     public Integer getId() {
@@ -110,4 +110,8 @@ public class Customer implements DomainObject {
     public void setZipCode(String zipCode) {
         this.zipCode = zipCode;
     }
+
+    public User getUser() { return user; }
+
+    public void setUser(User user) { this.user = user; }
 }

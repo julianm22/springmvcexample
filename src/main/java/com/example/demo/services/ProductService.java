@@ -1,4 +1,4 @@
-package com.example.demo.services.product;
+package com.example.demo.services;
 
 import com.example.demo.domain.Product;
 import com.example.demo.services.CRUDService;

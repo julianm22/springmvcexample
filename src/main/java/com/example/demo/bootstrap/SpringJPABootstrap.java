@@ -2,8 +2,8 @@ package com.example.demo.bootstrap;
 
 import com.example.demo.domain.Customer;
 import com.example.demo.domain.Product;
-import com.example.demo.services.customer.CustomerService;
-import com.example.demo.services.product.ProductService;
+import com.example.demo.services.CustomerService;
+import com.example.demo.services.ProductService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.ApplicationListener;
 import org.springframework.context.event.ContextRefreshedEvent;

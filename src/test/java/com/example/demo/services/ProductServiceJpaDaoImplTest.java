@@ -2,10 +2,8 @@ package com.example.demo.services;
 
 import com.example.demo.config.JpaIntegrationConfig;
 import com.example.demo.domain.Product;
-import com.example.demo.services.product.ProductService;
 import org.junit.Test;
 import org.junit.runner.RunWith;
-//import org.springframework.boot.test.SpringApplicationConfiguration;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.context.ActiveProfiles;

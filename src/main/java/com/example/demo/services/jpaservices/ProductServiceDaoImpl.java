@@ -1,6 +1,7 @@
-package com.example.demo.services.product;
+package com.example.demo.services.jpaservices;
 
 import com.example.demo.domain.Product;
+import com.example.demo.services.ProductService;
 import org.springframework.context.annotation.Profile;
 import org.springframework.stereotype.Service;
 

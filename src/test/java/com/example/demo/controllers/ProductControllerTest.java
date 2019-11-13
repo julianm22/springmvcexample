@@ -1,7 +1,7 @@
 package com.example.demo.controllers;
 
 import com.example.demo.domain.Product;
-import com.example.demo.services.product.ProductService;
+import com.example.demo.services.ProductService;
 import org.junit.Test;
 import org.junit.jupiter.api.BeforeEach;
 import org.mockito.*;
@@ -19,9 +19,6 @@ import static org.springframework.test.web.servlet.request.MockMvcRequestBuilder
 import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.post;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.*;
 
-/**
- * Created by jt on 11/16/15.
- */
 public class ProductControllerTest {
 
     @Mock //Mockito Mock object
