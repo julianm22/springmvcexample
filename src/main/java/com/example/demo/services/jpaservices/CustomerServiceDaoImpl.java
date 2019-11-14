@@ -14,18 +14,12 @@ import java.util.List;
 
 @Service
 @Profile("jpadao")
-public class CustomerServiceDaoImpl implements CustomerService {
+public class CustomerServiceDaoImpl extends AbstractJpaDaoService implements CustomerService {
 
     private EncryptionService encryptionService;
-    private EntityManagerFactory emf;
 
     @Autowired
     public void setEncryptionService(EncryptionService encryptionService) { this.encryptionService = encryptionService; }
-
-    @PersistenceUnit
-    public void setEmf(EntityManagerFactory emf) {
-        this.emf = emf;
-    }
 
     @Override
     public List<Customer> listAll() {

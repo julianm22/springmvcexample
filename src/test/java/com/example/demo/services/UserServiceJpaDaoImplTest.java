@@ -59,14 +59,14 @@ public class UserServiceJpaDaoImplTest {
         customer.setFirstName("Chevy");
         customer.setLastName("Chase");
 
-//        user.setCustomer(customer);
+        user.setCustomer(customer);
 
         User savedUser = userService.saveOrUpdate(user);
 
         assert savedUser.getId() != null;
         assert savedUser.getVersion() != null;
-//        assert savedUser.getCustomer() != null;
-//        assert savedUser.getCustomer().getId() != null;
+        assert savedUser.getCustomer() != null;
+        assert savedUser.getCustomer().getId() != null;
 
     }
 

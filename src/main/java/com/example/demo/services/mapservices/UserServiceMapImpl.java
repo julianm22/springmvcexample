@@ -8,9 +8,6 @@ import org.springframework.stereotype.Service;
 
 import java.util.List;
 
-/**
- * Created by jt on 12/14/15.
- */
 @Service
 @Profile("map")
 public class UserServiceMapImpl extends AbstractMapService implements UserService {
