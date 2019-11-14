@@ -3,7 +3,7 @@ package com.example.demo.services.jpaservices;
 import javax.persistence.EntityManagerFactory;
 import javax.persistence.PersistenceUnit;
 
-public class AbstractJpaDaoService {
+abstract class AbstractJpaDaoService {
 
     protected EntityManagerFactory emf;
 

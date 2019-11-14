@@ -1,8 +1,7 @@
 package com.example.demo.services;
 
 import com.example.demo.config.JpaIntegrationConfig;
-import com.example.demo.domain.Customer;
-import com.example.demo.domain.User;
+import com.example.demo.domain.*;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -70,7 +69,7 @@ public class UserServiceJpaDaoImplTest {
 
     }
 
-    /*@Test
+    @Test
     public void testAddCartToUser() throws Exception {
         User user = new User();
 
@@ -114,7 +113,7 @@ public class UserServiceJpaDaoImplTest {
         assert savedUser.getCart().getId() != null;
         assert savedUser.getCart().getCartDetails().size() == 2;
     }
-
+    /*
     @Test
     public void testAddAndRemoveCartToUserWithCartDetails() throws Exception {
         User user = new User();
