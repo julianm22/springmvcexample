@@ -4,7 +4,7 @@ import javax.persistence.*;
 import java.util.Date;
 
 @MappedSuperclass
-abstract class AbstractDomainClass implements DomainObject {
+public abstract class AbstractDomainClass implements DomainObject {
 
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
